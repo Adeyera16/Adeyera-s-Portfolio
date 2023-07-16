@@ -1,22 +1,24 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function About() {
   return (
-    <div id='About' className="mt-[6rem] ">
+    <div id='About' className="text-gray-500 bg-black p-[2rem] md:pl-[5rem]">
         <div>
-        <p className=''>Introduction</p>
-        <h2 className=''>Overview.</h2>
+        <p className='uppercase text-[18px]'>Introduction</p>
+        <h2 className='uppercase font-extrabold text-white text-[30px]'>Overview.</h2>
         </div>
 
         <div
-        className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-        sapiente ipsum dolorum dicta eaque cumque inventore molestias, beatae ea
-        quaerat alias accusamus voluptas autem! Alias odit voluptates in totam
-        vitae dignissimos minus eaque culpa unde tempore dolore aperiam
-        obcaecati voluptatum aliquam corrupti, suscipit accusamus! Odit unde
-        veniam dolorum ipsum doloribus.
+        className="mt-4 text-[18px] max-w-3xl leading-[30px]">
+        I am a Frontend Developer passionate about building web applications that're not only functional but also capable of solving intricate problems and enhancing user experiences. My approach is centered around putting the users needs at the forefront ensuring that the web solutions I create are both delightful and efficient.
         </ div>
+        <div className='mt-5'>
+          <Link to="https://drive.google.com/file/d/1lfshbSl_TTRza0P_gUBhRzCU7yY94DoL/view?usp=drivesdk" target='_blank' rel='noopener noreferrer' 
+          className='border-2 bg-white text-black p-1 rounded-md'>
+                Resume
+          </Link>
+        </div>
     </div>
     )
 }
