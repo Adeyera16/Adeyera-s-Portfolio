@@ -17,7 +17,7 @@ const Contact = () => {
           e.target.reset()
       };
   return (
-    <div className='bg-black md:px-[5rem] border-t-4 border-white'>
+    <div className='bg-black md:px-[5rem] border-t-4 border-gray-700'>
         <div className='flex flex-col justify-center max-w-[50rem] bg-black/25 p-4 '>
             <h4 className='text-[1rem] font-bold text-white'>Get in Touch</h4>
             <h1 className='text-[2.5rem] font-extrabold text-white'>Contact .</h1>
