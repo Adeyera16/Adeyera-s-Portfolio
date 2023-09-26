@@ -1,42 +1,43 @@
-
-
 import React, {useState} from 'react'
 import {AiOutlineMenu, AiOutlineHome, AiOutlineProject, AiOutlineMail} from 'react-icons/ai';
 import {BsPerson} from 'react-icons/bs'
-import {GrProjects} from 'react-icons/gr'
+import {GrProjects} from 'react-icons/gr';
+import { Link } from 'react-scroll';
+
 
 function SideNav() {
     const [nav, setNav] = useState(false);
     const handleNav = () => {
         setNav(!nav)
     }
-    return (  
-    <div>      
+    return (
+    <div>
         <AiOutlineMenu
          onClick={handleNav}
-         className='absolute top-4 right-4 z-[99] md:hidden'/>
+         className='absolute top-4 right-4 z-[99] md:hidden gradient__text'/>
          {
              nav ? (
                      <div className='fixed w-full h-screen bg-white/90 flex flex-col justify-center items-center z-20'>
-                         <a href="#main" className='w-[65%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 '>
+                         <Link activeClass='active' to='home' smooth={true} duration={500} className='w-[65%] flex justify-center items-center rounded-full shadow-lg gradient__bg text-white shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 '>
                              <AiOutlineHome size={20}/>
                              <span className='pl-4'>Home</span>
-                         </a>
-                         <a href="#About" className='w-[65%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 '>
-                             <GrProjects size={20}/>                           <span className='pl-4'>About</span>
-                         </a>
-                         <a href="#Project" className='w-[65%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 '>
+                         </Link>
+                         <Link activeClass='active'to='about' smooth={true} duration={500} className='w-[65%] flex justify-center items-center rounded-full shadow-lg gradient__bg text-white shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 '>
+                             <GrProjects size={20}/>
+                             <span className='pl-4'>About</span>
+                         </Link>
+                         <Link activeClass='active' to='projects' smooth={true} duration={500} className='w-[65%] flex justify-center items-center rounded-full shadow-lg gradient__bg text-white shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 '>
                              <AiOutlineProject size={20}/>
                              <span className='pl-4'>Project</span>
-                         </a>
-                         <a href="#Skill" className='w-[65%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 '>
+                         </Link>
+                         <Link activeClass='active' to='skills' smooth={true} duration={500} className='w-[65%] flex justify-center items-center rounded-full shadow-lg gradient__bg text-white shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 '>
                              <BsPerson size={20}/>
                              <span className='pl-4'>Skill</span>
-                         </a>
-                         <a href="#Contact" className='w-[65%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 '>
+                         </Link>
+                         <Link activeClass='active' to='contact' smooth={true} duration={500} className='w-[65%] flex justify-center items-center rounded-full shadow-lg gradient__bg text-white shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 '>
                              <AiOutlineMail size={20}/>
                              <span className='pl-4'>Contact</span>
-                         </a>
+                         </Link>
                      </div>
              )
              : (
@@ -45,21 +46,21 @@ function SideNav() {
          }
          <div className='md:block hidden fixed top-[25%] z-10'>
              <div className='flex flex-col'>
-                 <a href="#main" className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease duration-300'>
+                 <Link  to='home' smooth={true} duration={500} className='rounded-full shadow-lg gradient__bg text-white shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease duration-300'>
                      <AiOutlineHome />
-                 </a>
-                 <a href="#About" className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease duration-300'>
+                 </Link>
+                 <Link  to='about' smooth={true} duration={500} className='rounded-full shadow-lg gradient__bg text-white shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease duration-300'>
                      <GrProjects />
-                 </a>
-                 <a href="#projects" className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease duration-300'>
+                 </Link>
+                 <Link to='projects' smooth={true} duration={500} className='rounded-full shadow-lg gradient__bg text-white shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease duration-300'>
                      <AiOutlineProject />
-                 </a>
-                 <a href="#Skill" className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease duration-300'>
+                 </Link>
+                 <Link  to='skills' smooth={true} duration={500} className='rounded-full shadow-lg gradient__bg text-white shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease duration-300'>
                      <BsPerson />
-                 </a>
-                 <a href="#contact" className='rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease duration-300'>
+                 </Link>
+                 <Link  to='contact' smooth={true} duration={500} className='rounded-full shadow-lg gradient__bg text-white shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease duration-300'>
                      <AiOutlineMail />
-                 </a>
+                 </Link>
              </div>
          </div>
      </div>

@@ -3,7 +3,7 @@ import skillsData from '../utils/skillsData';
 
 function Skills() {
   return (
-    <div id='Skill' className='bg-black md:px-[5rem] p-4'>
+    <div id='skills'  className='bg-black md:px-[5rem] p-4'>
         <div className=''>
             <p className='text-gray-500 text-[20px]'>My skills</p>
             <h2 className='text-white text-[30px] font-extrabold'>Technologies.</h2>
