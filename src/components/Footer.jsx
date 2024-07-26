@@ -19,7 +19,7 @@ const Footer = () => {
               <FaInstagram className='cursor-pointer  mr-[1rem]' size={15} />
               </Link>
             </div>
-            <p className='text-sm text-[#6B7280] '>&copy; 2023 Adeyera Asimolowo</p>
+            <p className='text-sm text-[#6B7280] '>&copy; 2024 Adeyera Asimolowo</p>
     </footer>
   )
 }

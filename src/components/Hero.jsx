@@ -14,8 +14,8 @@ function Hero() {
               className='gradient__text font-poppins font-bold text-[40px]'>
               Hello!
             </h1>
-            <h2 className='font-poppins font-semi-bold text-[30px]'>I'm Adeyera Asimolowo</h2>
-            <p className=''>A frontend developer creating amazing user experiences through innovative technology. Let's collaborate!</p>
+            <h2 className='font-poppins font-bold text-[40px]'>I'm Adeyera Asimolowo</h2>
+            <p className='max-w-[500px]'>A frontend developer creating amazing user experiences through innovative technology. Let's collaborate!</p>
             <Link
             activeClass='active'
             spy={true}
